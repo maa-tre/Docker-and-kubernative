@@ -1,0 +1,7 @@
+print("===================================")
+print("        HELLO FROM DOCKER!         ")
+print("===================================")
+print("Docker container started successfully.")
+print("Welcome to Docker learning!")
+print("Your journey from Docker -> Kubernetes begins here.")
+print("===================================")
