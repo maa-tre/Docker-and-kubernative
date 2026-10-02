@@ -20,8 +20,26 @@ jobs:
       - name: Build Docker image
         run: docker build -t hello-docker ./01-docker-hello
 
+      - name: Inspect Docker image
+        run: docker image inspect hello-docker
+
       - name: List Docker images
         run: docker images
 
       - name: Run Docker container
-        run: docker run --rm hello-docker
+        run: docker run -d --name hello-container hello-docker
+
+      - name: Show running containers
+        run: docker ps
+
+      - name: Show container details
+        run: docker inspect hello-container
+
+      - name: Show container logs
+        run: docker logs hello-container
+
+      - name: Stop container
+        run: docker stop hello-container
+
+      - name: Remove container
+        run: docker rm hello-container
