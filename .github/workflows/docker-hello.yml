@@ -20,6 +20,9 @@ jobs:
       - name: Build Docker image
         run: docker build -t hello-docker ./01-docker-hello
 
+      - name: Show image history
+        run: docker history hello-docker
+
       - name: Inspect Docker image
         run: docker image inspect hello-docker
 
